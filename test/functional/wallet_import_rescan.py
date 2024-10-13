@@ -153,7 +153,7 @@ class ImportRescanTest(BitcoinTestFramework):
         self.extra_args = [[] for _ in range(self.num_nodes)]
         for i, import_node in enumerate(IMPORT_NODES, 2):
             if import_node.prune:
-                self.extra_args[i] += ["-prune=1", "-peerblockfilters=0", "-blockfilterindex=0"]
+                self.extra_args[i] += ["-prune=1"]
 
         self.add_nodes(self.num_nodes, extra_args=self.extra_args)
 
